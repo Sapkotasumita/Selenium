@@ -34,14 +34,14 @@
 #             print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Issue ❌")
 
 #     if submit_button.is_displayed() and submit_button.is_enabled():
-#         print("Submit button: Displayed ✅ Enabled ✅")
+#         print("Submit button: Displayed  Enabled ")
 #     else:
-#         print("Submit button: Issue ❌")
+#         print("Submit button: Issue ")
 
 #     driver.save_screenshot("booking_ui.png")
 #     print("Saved screenshot booking_ui.png\n")
 
-#     # ------------------- 1️⃣ Empty Submission -------------------
+#     # -------------------  Empty Submission -------------------
 #     print("===== Test 1: Empty Submission =====")
 #     driver.execute_script("arguments[0].scrollIntoView(true);", submit_button)
 #     driver.execute_script("arguments[0].click();", submit_button)
@@ -54,7 +54,7 @@
 #     driver.save_screenshot("booking_empty.png")
 #     print("Saved screenshot booking_empty.png\n")
 
-#     # ------------------- 2️⃣ Invalid Input Submission -------------------
+#     # ------------------- Invalid Input Submission -------------------
 #     print("===== Test 2: Invalid Input Submission =====")
 #     name_field.clear(); name_field.send_keys("12345!@#")
 #     email_field.clear(); email_field.send_keys("invalidemail")
@@ -75,7 +75,7 @@
 #     driver.save_screenshot("booking_invalid.png")
 #     print("Saved screenshot booking_invalid.png\n")
 
-#     # ------------------- 3️⃣ Valid Input Submission -------------------
+#     # -------------------  Valid Input Submission -------------------
 #     print("===== Test 3: Valid Submission =====")
 #     name_field.clear(); name_field.send_keys("QA Test User")
 #     email_field.clear(); email_field.send_keys("qa_test@example.com")
@@ -135,7 +135,7 @@ try:
 
     fields = [name_field, email_field, phone_field, quantity_field, address_field, date_field, message_field]
 
-    # ------------------- 1️⃣ UI Verification -------------------
+    # -------------------  UI Verification -------------------
     print("===== UI Verification =====")
     for field in fields:
         if field.is_displayed() and field.is_enabled():
@@ -144,7 +144,7 @@ try:
             print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Issue ❌")
 
     if submit_button.is_displayed() and submit_button.is_enabled():
-        print("Submit button: Displayed ✅ Enabled ✅")
+        print("Submit button: Displayed  Enabled ")
     else:
         print("Submit button: Issue ")
 
@@ -157,7 +157,7 @@ try:
         driver.execute_script("arguments[0].click();", btn)
         time.sleep(2)
 
-    # ------------------- 2️⃣ Empty Submission -------------------
+    # -------------------  Empty Submission -------------------
     print("===== Test 1: Empty Submission =====")
     click_button(submit_button)
 
@@ -172,7 +172,7 @@ try:
     driver.save_screenshot("booking_empty.png")
     print("Saved screenshot booking_empty.png\n")
 
-    # ------------------- 3️⃣ Invalid Input Submission -------------------
+    # -------------------  Invalid Input Submission -------------------
     print("===== Test 2: Invalid Input Submission =====")
     name_field.clear(); name_field.send_keys("12345!@#")
     email_field.clear(); email_field.send_keys("invalidemail")
@@ -195,7 +195,7 @@ try:
     driver.save_screenshot("booking_invalid.png")
     print("Saved screenshot booking_invalid.png\n")
 
-    # ------------------- 4️⃣ Valid Input Submission -------------------
+    # -------------------  Valid Input Submission -------------------
     print("===== Test 3: Valid Submission =====")
     name_field.clear(); name_field.send_keys("QA Test User")
     email_field.clear(); email_field.send_keys("qa_test@example.com")

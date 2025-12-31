@@ -12,7 +12,7 @@
 
 # try:
 #     # ------------------------------
-#     # 1️⃣ Submit without filling fields
+#     # Submit without filling fields
 #     # ------------------------------
 #     send_button = wait.until(
 #         EC.element_to_be_clickable((By.XPATH, "//button[text()='Send Message']"))
@@ -33,7 +33,7 @@
 #         print("No HTML5 validation messages found  (browser may not show custom messages)")
 
 #     # ------------------------------
-#     # 2️⃣ Submit with valid data
+#     # Submit with valid data
 #     # ------------------------------
 #     # Fill Full Name (first text input)
 #     driver.find_element(By.XPATH, "(//input[@type='text'])[1]").send_keys("Test User")
@@ -76,7 +76,7 @@
 
 # try:
 #     # ------------------------------
-#     # 1️⃣ Submit empty form first (check required)
+#     # Submit empty form first (check required)
 #     # ------------------------------
 #     send_button = wait.until(
 #         EC.element_to_be_clickable((By.XPATH, "//button[text()='Send Message']"))
@@ -91,7 +91,7 @@
 #             print(f"Validation triggered for field: {field.get_attribute('id') or field.get_attribute('name')}")
 
 #     # ------------------------------
-#     # 2️⃣ Submit with invalid data
+#     # Submit with invalid data
 #     # ------------------------------
 #     print("----- Invalid input validation -----")
 
@@ -122,7 +122,7 @@
 
 #     # Screenshot
 #     driver.save_screenshot("clickon_contact_invalid_test.png")
-#     print("Screenshot saved for invalid input test ✅")
+#     print("Screenshot saved for invalid input test ")
 
 # except Exception as e:
 #     print("Error during Contact Us invalid test:", e)
@@ -149,7 +149,7 @@ try:
     )
 
     # ------------------------------
-    # 1️⃣ Empty submission
+    #  Empty submission
     # ------------------------------
     print("===== Test 1: Empty Submission =====")
     send_button.click()
@@ -167,7 +167,7 @@ try:
     print("Screenshot saved: contact_empty.png\n")
 
     # ------------------------------
-    # 2️⃣ Invalid input submission
+    #  Invalid input submission
     # ------------------------------
     print("===== Test 2: Invalid Input Submission =====")
 
@@ -202,7 +202,7 @@ try:
     print("Screenshot saved: contact_invalid.png\n")
 
     # ------------------------------
-    # 3️⃣ Valid input submission
+    # Valid input submission
     # ------------------------------
     print("===== Test 3: Valid Submission =====")
 

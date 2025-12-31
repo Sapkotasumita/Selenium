@@ -11,17 +11,17 @@ driver.get("https://www.softy.com.np/")
 wait = WebDriverWait(driver, 15)
 
 try:
-    # 1️⃣ Assert page title
+    #  Assert page title
     assert "Softy" in driver.title
     print("Title assertion passed ")
 
-    # 2️⃣ Verify logo exists
+    #  Verify logo exists
     logo = wait.until(
         EC.presence_of_element_located((By.XPATH, "//img"))
     )
     print("Logo found ")
 
-    # 3️⃣ Verify and print menu links
+    #  Verify and print menu links
     menu_items = driver.find_elements(By.XPATH, "//a")
     print("Total links found:", len(menu_items))
     for item in menu_items:
@@ -29,17 +29,17 @@ try:
         if text:
             print("Menu link:", text)
 
-    # 4️⃣ Click the Contact menu link (if exists)
+    # Click the Contact menu link (if exists)
     contact_link = driver.find_element(By.LINK_TEXT, "Contact")
     contact_link.click()
     wait.until(EC.url_contains("contact"))
     print("Contact page opened ")
 
-    # 5️⃣ Scroll to bottom
+    #  Scroll to bottom
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     print("Scrolled to bottom ")
 
-    # 6️⃣ Take screenshot
+    #  Take screenshot
     driver.save_screenshot("softy_homepage_test.png")
     print("Screenshot saved ")
 
