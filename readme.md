@@ -1,1 +1,1 @@
-echo "# Selenium Tests" >> README.md
+echo "# Selenium Tests" 
