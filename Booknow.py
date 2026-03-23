@@ -139,9 +139,9 @@ try:
     print("===== UI Verification =====")
     for field in fields:
         if field.is_displayed() and field.is_enabled():
-            print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Displayed ✅ Enabled ✅")
+            print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Displayed  Enabled ")
         else:
-            print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Issue ❌")
+            print(f"{field.get_attribute('placeholder') or field.get_attribute('name')} field: Issue ")
 
     if submit_button.is_displayed() and submit_button.is_enabled():
         print("Submit button: Displayed  Enabled ")
